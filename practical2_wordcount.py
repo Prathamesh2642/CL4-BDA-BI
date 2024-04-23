@@ -39,6 +39,6 @@ def main(filename, target_word):
     print(f"The frequency of '{target_word}' in the file is: {target_frequency}")
 
 if __name__ == "__main__":
-    filename = input("Enter the file name: ")   #paste the path of practical2.txt, after running the code 
+    filename = input("Enter the file path: ")   #paste the path of practical2.txt, after running the code 
     target_word = input("Enter the word to find frequency: ")  #enter any word fro practical2.txt
     main(filename, target_word)
