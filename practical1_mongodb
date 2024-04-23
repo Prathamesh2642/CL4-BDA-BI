@@ -3,6 +3,7 @@ command - mongod
 # to start mongodb client
 command mongo
 
+#CREATE
 
 > show dbs
 admin          0.000GB
@@ -16,4 +17,67 @@ trial          0.000GB
 > db.emp.insert({id:'1',name:'Prathamesh'})
 WriteResult({ "nInserted" : 1 })
 
+> db.emp.insert({id:'1',name:'Dhoni'})
+WriteResult({ "nInserted" : 1 })
+
+> db.emp.insert({id:'3',name:'Virat'})
+WriteResult({ "nInserted" : 1 })
+> db.emp.insert({id:'4',name:'Sachin'})
+WriteResult({ "nInserted" : 1 })
+
+
+#READ
+
+> db.emp.find()
+{ "_id" : ObjectId("662775d604960938b21152ea"), "id" : "1", "name" : "Prathamesh" }
+{ "_id" : ObjectId("662784f704960938b21152eb"), "id" : "2", "name" : "Dhoni" }
+{ "_id" : ObjectId("6627867104960938b21152ec"), "id" : "3", "name" : "Virat" }
+{ "_id" : ObjectId("6627867e04960938b21152ed"), "id" : "4", "name" : "Sachin" }
+> db.emp.find().pretty()
+{
+        "_id" : ObjectId("662775d604960938b21152ea"),
+        "id" : "1",
+        "name" : "Prathamesh"
+}
+{
+        "_id" : ObjectId("662784f704960938b21152eb"),
+        "id" : "2",
+        "name" : "Dhoni"
+}
+{
+        "_id" : ObjectId("6627867104960938b21152ec"),
+        "id" : "3",
+        "name" : "Virat"
+}
+{
+        "_id" : ObjectId("6627867e04960938b21152ed"),
+        "id" : "4",
+        "name" : "Sachin"
+}
+
+
+#UPDATE
+> db.emp.update({name:"Dhoni"},{$set:{id:"2"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+#DELETE
+
+> db.emp.remove({id:"3"})
+WriteResult({ "nRemoved" : 1 })
+> db.emp.find().pretty()
+{
+        "_id" : ObjectId("662775d604960938b21152ea"),
+        "id" : "1",
+        "name" : "Prathamesh"
+}
+{
+        "_id" : ObjectId("662784f704960938b21152eb"),
+        "id" : "2",
+        "name" : "Dhoni"
+}
+{
+        "_id" : ObjectId("6627867e04960938b21152ed"),
+        "id" : "4",
+        "name" : "Sachin"
+}
 
