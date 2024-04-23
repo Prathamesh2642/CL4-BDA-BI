@@ -30,7 +30,7 @@ WriteResult({ "nInserted" : 1 })
 
 > db.emp.find()
 { "_id" : ObjectId("662775d604960938b21152ea"), "id" : "1", "name" : "Prathamesh" }
-{ "_id" : ObjectId("662784f704960938b21152eb"), "id" : "2", "name" : "Dhoni" }
+{ "_id" : ObjectId("662784f704960938b21152eb"), "id" : "1", "name" : "Dhoni" }
 { "_id" : ObjectId("6627867104960938b21152ec"), "id" : "3", "name" : "Virat" }
 { "_id" : ObjectId("6627867e04960938b21152ed"), "id" : "4", "name" : "Sachin" }
 > db.emp.find().pretty()
@@ -41,7 +41,7 @@ WriteResult({ "nInserted" : 1 })
 }
 {
         "_id" : ObjectId("662784f704960938b21152eb"),
-        "id" : "2",
+        "id" : "1",
         "name" : "Dhoni"
 }
 {
