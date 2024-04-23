@@ -13,6 +13,7 @@ def map_reduce_with_pandas(input_file):
     return average_age_deceased_males, count_deceased_females_by_class
   
 input_file = r'D:\Learning only\CL4\Titanic-Dataset.csv' # Update this to the path of your Titanic dataset CSV file 
+#titanic dataset is uploaded on github- Titanic-Dataset.csv
 average_age, female_class_count = map_reduce_with_pandas(input_file)
 print(f"Average age of males who died: {average_age:.2f}")
 print("Number of deceased females in each class:")
