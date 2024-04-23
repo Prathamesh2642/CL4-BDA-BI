@@ -1,0 +1,12 @@
+Prathamesh,95
+Rohit,75
+Virat,82
+Sachin,68
+Dhoni,88
+Ashwin,73
+Kuldeep,91
+David,55
+jadeja,50
+Rahul,60
+Iyer,45
+Chahal,40
